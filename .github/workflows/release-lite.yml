@@ -72,6 +72,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     env:
       CGO_ENABLED: 1
+      GOTOOLCHAIN: auto
     steps:
       - uses: actions/checkout@v6
 
@@ -167,6 +168,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     env:
       CGO_ENABLED: 1
+      GOTOOLCHAIN: auto
     steps:
       - uses: actions/checkout@v6
 
