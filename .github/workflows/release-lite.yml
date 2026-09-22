@@ -18,7 +18,7 @@ permissions:
   contents: write
 
 env:
-  GO_VERSION: "1.26.0"
+  GO_VERSION: "1.25"
   NODE_VERSION: "22"
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
   GOPROXY: "https://goproxy.cn,direct"
@@ -102,6 +102,7 @@ jobs:
 
       - name: Build
         run: |
+          export GOTOOLCHAIN=auto
           export EDITION=lite
           eval "$(./scripts/get_version.sh env)"
           LDFLAGS="-w -s $(./scripts/get_version.sh ldflags)"
