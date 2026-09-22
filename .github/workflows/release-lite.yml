@@ -21,6 +21,9 @@ env:
   GO_VERSION: "1.25"
   NODE_VERSION: "22"
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
+  GOPROXY: "https://goproxy.cn,direct"
+  GONOSUMDB: "*"
+  GOFLAGS: "-insecure"
 
 jobs:
   # ── 1. Build frontend once, share as artifact (for Web CLI) ──
